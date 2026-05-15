@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portafolio personal de Geraldine Ttito, Fullstack Developer especializada en interfaces modernas, accesibles y centradas en las personas." />
+    <title>Geraldine Ttito | Fullstack Developer</title>
+    <link rel="stylesheet" href="css/base/tokens.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/layout/container.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/stack.css">
+    <link rel="stylesheet" href="css/components/experience.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/contact.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/utilities/helpers.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container navbar" aria-label="Navegación principal">
+            <a class="brand" href="#inicio" aria-label="Ir al inicio">
+                <svg class="brand__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 8l-4 4 4 4M17 8l4 4-4 4M13 5l-2 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="brand__name">FULLSTACK</span>
+            </a>
+
+            <nav aria-label="Menú principal">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a class="is-active" href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#educacion">Formación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar__actions">
+                <button class="icon-button" id="themeToggle" type="button" aria-label="Cambiar tema">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                        <path
+                            d="M12 3v2M12 19v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M3 12h2M19 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+
+                <a class="button navbar__cta" href="#contacto">
+                    Hablemos
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                        <path d="M12 2l1.8 5.7L20 10l-6.2 2.3L12 18l-1.8-5.7L4 10l6.2-2.3L12 2Z" fill="currentColor" />
+                    </svg>
+                </a>
+
+                <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú"
+                    aria-controls="navMenu" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <span class="hero__eyebrow">Estudiante de Desarrollo de Software</span>
+                <h1 class="hero__title" id="hero-title">
+                    GERALDINE EVELYN <span class="accent-text">TTITO GARCIA</span>
+                </h1>
+                <p class="hero__description">
+                    Estudiante orientado al sector de TI, enfocado en crear aplicaciones ordenadas y escalables mediante buenas prácticas de desarrollo.
+                </p>
+
+                <div class="hero__actions" aria-label="Acciones principales">
+                    <a class="button button--primary" href="#proyectos">
+                        Ver proyectos
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a class="button button--secondary" href="#contacto">
+                        Contáctame
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="availability">
+                    <span class="availability__dot" aria-hidden="true"></span>
+                    Disponible para nuevos proyectos
+                </p>
+            </div>
+
+            <div class="hero__visual" aria-label="Fotografía de Geraldine Ttito">
+                <div class="hero__blob" aria-hidden="true"></div>
+                <div class="decor-dots" aria-hidden="true"></div>
+                <div class="decor-code" aria-hidden="true">&lt;/&gt;</div>
+                <div class="decor-sparkles" aria-hidden="true">✦</div>
+
+                <img class="hero-portrait" src="img/perfil.webp" alt="Geraldine Ttito">
+
+                <article class="floating-code" aria-label="Tarjeta decorativa de código">
+                    <div class="floating-code__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <pre><code><span class="code-key">const</span> developer = {
+  name: 'Geraldine Evelyn',
+  focus: 'Software',
+  loves: ['logic', 'code'],
+  create: () =&gt; 'soluciones'
+}</code></pre>
+                </article>
+
+                <div class="floating-note" aria-label="Pixel perfect con propósito">
+                    <span class="floating-note__icon" aria-hidden="true">◆</span>
+                    <span>Transformando ideas<br />en código real.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container stack-card" id="sobre-mi" aria-labelledby="stack-title">
+            <div class="stack-card__header">
+                <h2 class="stack-card__title" id="stack-title">Stack &amp; Herramientas</h2>
+                <p class="stack-card__subtitle">Siempre aprendiendo, siempre creciendo.</p>
+            </div>
+
+            <div class="tools-grid" aria-label="Habilidades técnicas">
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-html" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2L4.62273 20.2455L12 22.25L19.3773 20.2455L21 2H3ZM17.1591 14.9318L16.8955 17.8864L12 19.2273L7.10455 17.8864L6.78636 14.3182H9.01818L9.18636 16.1955L12 16.9636L14.8136 16.1955L14.9636 14.4773H6.66364L6.28182 10.1591H15.3455L15.5364 8.01818H6.09091L5.70909 3.70455H18.2955L17.1591 14.9318Z" fill="currentColor"/></svg>
+                    <span>HTML5</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-css" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2L4.62273 20.2455L12 22.25L19.3773 20.2455L21 2H3ZM16.8955 17.8864L12 19.2273L7.10455 17.8864L6.78636 14.3182H9.01818L9.18636 16.1955L12 16.9636L14.8136 16.1955L14.9636 14.4773H10.5818L10.45 13.0455H15.1364L15.5364 8.01818H10.0136L9.88182 6.58182H15.9182L16.3 2.25H5.70909L6.09091 6.58182H7.72727L7.85909 8.01818H6.21818L6.6 12.3455H10.3864L10.5182 13.7818H7.10455L7.23636 15.2182L12 16.6545L16.7636 15.2182L17.1591 10.8909H15.1364L15.2682 9.45455H17.4227L17.1591 14.9318H17.1591Z" fill="currentColor"/></svg>
+                    <span>CSS3</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-js" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 14v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2a2 2 0 01-2-2V8a2 2 0 012-2h2a2 2 0 012 2v2h-2V8h-2v2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2h2zM7 6h2v8a2 2 0 01-2 2H5v-2h2V6z" fill="currentColor"/></svg>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-sass" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.751 15.228a6.438 6.438 0 01-1.332 4.093c-1.42 1.83-4.088 2.22-5.748 1.433-2.008-.952-1.782-3.14-1.222-4.102.508-.87 1.488-1.507 2.107-1.854 1.464-.817 2.658-1.442 3.504-2.28.618-.612.96-1.345.96-2.062 0-2.434-3.792-3.018-4.996-2.15-.353.255-.38.795-.035 1.05.3.224.764.12 1.018-.11.4-.366 1.802-.508 2.052.28.183.57-.468 1.255-1.956-.91 1-2.186 1.704-3.692 2.544-1.127.63-3.666 1.92-3.844 4.398-.103 1.428.647 2.915 2.164 3.652 2.67 1.295 6.012.394 7.642-1.764a7.922 7.922 0 001.62-5.263c-.007-4.39-3.957-8.082-9.42-8.082-5.592 0-10.125 4.353-10.125 9.723 0 2.95 1.34 5.39 4.103 7.02.404.238.868.04 1.042-.353.15-.343.052-.777-.282-.996a7.202 7.202 0 01-3.322-5.67c0-4.544 3.864-8.237 8.583-8.237 4.606 0 7.928 3.12 7.928 6.713 0 .864-.4 1.756-1.127 2.476-.848.84-2.072 1.482-3.55 2.308-1.128.632-2.11 1.278-2.617 2.148-.28.483-.433.992-.472 1.503-.064.836.19 1.637.712 2.256-.47-.194-.925-.436-1.344-.73a11.13 11.13 0 01-4.708-8.037c0-6.115 4.93-11.08 11.01-11.08s11.01 4.965 11.01 11.08a11.015 11.015 0 01-1.468 5.48z" fill="currentColor"/></svg>
+                    <span>Sass</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-tailwind" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 6.002c-2.5 0-4.001 1.25-4.501 3.75 1.25-1.25 2.5-1.5 3.75-.75 0.714 0.428 1.224 0.94 1.787 1.503 0.916 0.917 1.977 1.977 4.214 1.977 2.5 0 4.001-1.25 4.501-3.75-1.25 1.25-2.5 1.5-3.75 0.75-0.714-0.428-1.224-0.94-1.787-1.503-0.916-0.917-1.977-1.977-4.214-1.977zm-4.501 6c-2.5 0-4.001 1.25-4.501 3.75 1.25-1.25 2.5-1.5 3.75-.75 0.714 0.428 1.224 0.94 1.787 1.503 0.916 0.917 1.977 1.977 4.214 1.977 2.5 0 4.001-1.25 4.501-3.75-1.25 1.25-2.5 1.5-3.75 0.75-0.714-0.428-1.224-0.94-1.787-1.503-0.916-0.917-1.977-1.977-4.214-1.977z" fill="currentColor"/></svg>
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-figma" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2C6.34315 2 5 3.34315 5 5C5 6.65685 6.34315 8 8 8H11V2H8ZM11 8H14C15.6569 8 17 6.65685 17 5C17 3.34315 15.6569 2 14 2H11V8ZM5 12C5 10.3431 6.34315 9 8 9H11V15H8C6.34315 15 5 13.6569 5 12ZM11 15V9H14C15.6569 9 17 10.3431 17 12C17 13.6569 15.6569 15 14 15H11ZM8 16C6.34315 16 5 17.3431 5 19C5 20.6569 6.34315 22 8 22C9.65685 22 11 20.6569 11 19V16H8Z" fill="currentColor"/></svg>
+                    <span>Figma</span>
+                </div>
+                <div class="tool-badge">
+                    <svg class="tool-badge__svg icon-git" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.62 10.45l-7.07-7.07a2.5 2.5 0 00-3.54 0L8.85 4.54l2.58 2.58a2.5 2.5 0 013.54 3.54l2.58 2.58 3.07-3.07a1.25 1.25 0 000-1.77zM4.54 8.85a2.5 2.5 0 000 3.54l7.07 7.07a2.5 2.5 0 003.54 0l1.16-1.16-2.58-2.58a2.5 2.5 0 01-3.54-3.54l-2.58-2.58L4.54 8.85z" fill="currentColor"/></svg>
+                    <span>Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-spacing" id="experiencia" aria-labelledby="experience-title">
+            <div class="section-header">
+                <h2 class="section-title" id="experience-title">Experiencia</h2>
+                <a class="section-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">Ver
+                    más en LinkedIn ↗</a>
+            </div>
+
+            <div class="experience-layout">
+                <span class="timeline-line" aria-hidden="true"></span>
+
+                <article class="experience-item">
+                    <time class="experience-item__date" datetime="2026">Enero 2026 - Presente</time>
+                    <div>
+                        <h3 class="experience-item__title">Practicante de Desarrollo de Software · Empresa de Tecnología Local</h3>
+                        <p class="experience-item__description">
+                            Apoyo en el desarrollo de funcionalidades básicas para aplicaciones web, corrección de errores simples y mejora de interfaces de usuario.
+                        </p>
+                        <div class="chips" aria-label="Tecnologías usadas">
+                            <span class="chip">Web Apps</span><span class="chip">UI/UX</span><span
+                                class="chip">Bug Fixing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-item">
+                    <time class="experience-item__date" datetime="2025">Julio 2025 - Diciembre 2025</time>
+                    <div>
+                        <h3 class="experience-item__title">Practicante de Desarrollo Web · Compañía de Soluciones Digitales</h3>
+                        <p class="experience-item__description">
+                            Apoyo en la creación de páginas web usando HTML, CSS y JavaScript. Integración básica de formularios, interfaces y componentes visuales.
+                        </p>
+                        <div class="chips" aria-label="Tecnologías usadas">
+                            <span class="chip">HTML5</span><span class="chip">CSS3</span><span
+                                class="chip">JavaScript</span><span class="chip">Formularios</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-item">
+                    <time class="experience-item__date" datetime="2024">Agosto 2024 - Junio 2025</time>
+                    <div>
+                        <h3 class="experience-item__title">Asistente de Tecnología · Escuela Técnica Local</h3>
+                        <p class="experience-item__description">
+                            Apoyo a estudiantes en el uso de herramientas digitales y software educativo. Instalación, configuración y mantenimiento de programas.
+                        </p>
+                        <div class="chips" aria-label="Responsabilidades">
+                            <span class="chip">Soporte IT</span><span class="chip">Software Educativo</span><span
+                                class="chip">Configuración</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container section-spacing" id="proyectos" aria-labelledby="projects-title">
+            <div class="section-header">
+                <h2 class="section-title" id="projects-title">Proyectos Destacados</h2>
+                <a class="section-link" href="#contacto">Ver todos los proyectos →</a>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-card__preview" aria-hidden="true">
+                        <svg class="preview-ui" viewBox="0 0 420 220">
+                            <rect width="420" height="220" rx="22" fill="#fff5fa" />
+                            <rect x="24" y="22" width="82" height="176" rx="16" fill="#f4d9ea" />
+                            <rect x="126" y="28" width="250" height="42" rx="14" fill="#ffffff" />
+                            <rect x="126" y="88" width="118" height="84" rx="16" fill="#ffffff" />
+                            <rect x="258" y="88" width="118" height="84" rx="16" fill="#ffffff" />
+                            <path d="M144 150c22-42 54-12 74-34 26-28 56 12 78-20 18-26 44-2 60-16" fill="none"
+                                stroke="#ca8df0" stroke-width="8" stroke-linecap="round" />
+                            <circle cx="53" cy="55" r="12" fill="#ec6fa3" opacity="0.65" />
+                            <rect x="45" y="88" width="40" height="8" rx="4" fill="#ffffff" />
+                            <rect x="45" y="112" width="36" height="8" rx="4" fill="#ffffff" opacity="0.72" />
+                        </svg>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="pill">Fintech</span>
+                        <h3 class="project-card__title">LANDING PAGE PROYECTO DE CERTUS</h3>
+                        <p class="project-card__description">Dashboard financiero con analíticas en tiempo real,
+                            diseñado para una experiencia clara e intuitiva.</p>
+                        <p class="project-card__stack">HTML · CSS · JAVASCRIPT · FIREBASE</p>
+                        <a class="project-card__action" href="https://github.com/Braulio2002/proyecto-grupo3-lenguaje" target="_blank" aria-label="Ver proyecto FlowPay Dashboard">
+                            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__preview" aria-hidden="true">
+                        <svg class="preview-ui" viewBox="0 0 420 220">
+                            <rect width="420" height="220" rx="22" fill="#fff8f0" />
+                            <rect x="28" y="28" width="364" height="164" rx="18" fill="#ffffff" />
+                            <circle cx="300" cy="112" r="58" fill="#e5d7c8" />
+                            <path d="M290 112c-12-35 14-57 45-70-7 35-18 57-45 70Z" fill="#7c9b6d" />
+                            <path d="M304 119c18-32 47-28 76-8-26 16-50 20-76 8Z" fill="#9bb783" />
+                            <rect x="56" y="64" width="128" height="14" rx="7" fill="#3c322f" opacity="0.72" />
+                            <rect x="56" y="90" width="172" height="10" rx="5" fill="#c9b8ac" />
+                            <rect x="56" y="110" width="142" height="10" rx="5" fill="#d6c8be" />
+                            <rect x="56" y="144" width="88" height="28" rx="14" fill="#8fa876" />
+                        </svg>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="pill">Game</span>
+                        <h3 class="project-card__title">JUEGO DE SLIME</h3>
+                        <p class="project-card__description">Sitio web para una marca de bienestar y meditación. Diseño
+                            minimalista y experiencia inmersiva.</p>
+                        <p class="project-card__stack">HTML · CSS · JAVASCRIPT · FIREBASE</p>
+                        <a class="project-card__action" href="https://github.com/GeraldineTtito/juego-certus"  target="_blank" aria-label="Ver proyecto Natura Mind">
+                            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__preview" aria-hidden="true">
+                        <svg class="preview-ui" viewBox="0 0 420 220">
+                            <rect width="420" height="220" rx="22" fill="#fff4f7" />
+                            <rect x="28" y="28" width="364" height="164" rx="18" fill="#ffffff" />
+                            <rect x="52" y="58" width="142" height="18" rx="9" fill="#d96f99" opacity="0.82" />
+                            <rect x="52" y="88" width="190" height="10" rx="5" fill="#d8c2ce" />
+                            <rect x="52" y="108" width="142" height="10" rx="5" fill="#ead8e1" />
+                            <rect x="52" y="138" width="78" height="28" rx="14" fill="#2f252b" />
+                            <rect x="270" y="58" width="72" height="96" rx="10" fill="#ead5cd" />
+                            <rect x="252" y="88" width="105" height="84" rx="12" fill="none" stroke="#b89082"
+                                stroke-width="5" />
+                            <circle cx="279" cy="174" r="18" fill="#f2c6d9" />
+                            <circle cx="324" cy="174" r="18" fill="#d8b3ef" />
+                        </svg>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="pill">Personal</span>
+                        <h3 class="project-card__title">PORTAFOLIO DE CERTUS</h3>
+                        <p class="project-card__description">Tienda online de moda con enfoque en usabilidad y una
+                            experiencia de compra fluida.</p>
+                        <p class="project-card__stack">HTML · CSS · JAVASCRIPT · FIREBASE</p>
+                        <a class="project-card__action" href="#contacto" aria-label="Ver proyecto Luna Store">
+                            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container section-spacing" id="educacion" aria-labelledby="education-title">
+            <div class="section-header">
+                <h2 class="section-title" id="education-title">Formación & Certificaciones</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <h3 class="experience-item__title">Instituto Certus</h3>
+                    <p class="testimonial-card__text">Diseño y Desarrollo de Software (2026). Promedio académico destacado.</p>
+                    <div class="chips">
+                        <span class="chip">Lima, Perú</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <h3 class="experience-item__title">Universidad Cesar Vallejo</h3>
+                    <p class="testimonial-card__text">Psicología (Abril 2025).</p>
+                    <div class="chips">
+                        <span class="chip">Lima, Perú</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <h3 class="experience-item__title">Certificaciones IT</h3>
+                    <p class="testimonial-card__text">Fundamentos de Programación y Desarrollo de Software Básico (Instituto de Tecnología Local, 2026).</p>
+                    <div class="chips">
+                        <span class="chip">Lógica</span><span class="chip">Algoritmos</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container section-spacing" id="contacto" aria-labelledby="contact-title">
+            <div class="contact-card">
+                <div>
+                    <h2 class="section-title" id="contact-title">Hablemos de tu próximo proyecto</h2>
+                    <p class="contact-card__description">Estoy disponible para colaboraciones y nuevas oportunidades.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <a href="mailto:Evelyn.18ttito@gmail.com">
+                                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                    <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" />
+                                    <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                Evelyn.18ttito@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                    <path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                Lima, Perú
+                            </span>
+                        </li>
+                        <li>
+                            <a href="tel:+51977199477">
+                                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.08 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.63 2.6a2 2 0 0 1-.45 2.11L9 10.67a16 16 0 0 0 4.33 4.33l1.24-1.24a2 2 0 0 1 2.11-.45c.83.3 1.7.51 2.6.63A2 2 0 0 1 22 16.92Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                +51 977 199 477
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <span class="sr-only">Nombre</span>
+                            <input class="form-input" type="text" name="name" placeholder="Nombre" autocomplete="name"
+                                required />
+                        </label>
+
+                        <label class="form-field">
+                            <span class="sr-only">Email</span>
+                            <input class="form-input" type="email" name="email" placeholder="Email" autocomplete="email"
+                                required />
+                        </label>
+
+                        <label class="form-field form-field--full">
+                            <span class="sr-only">Mensaje</span>
+                            <textarea class="form-input" name="message" placeholder="Mensaje" required></textarea>
+                        </label>
+                    </div>
+
+                    <button class="button button--primary" type="submit">
+                        Enviar mensaje
+                        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                            <path d="M12 2l1.8 5.7L20 10l-6.2 2.3L12 18l-1.8-5.7L4 10l6.2-2.3L12 2Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <output class="form-status" id="formStatus"></output>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="brand" href="#inicio" aria-label="Volver al inicio">
+                <svg class="brand__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 8l-4 4 4 4M17 8l4 4-4 4M13 5l-2 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="brand__name">FULLSTACK</span>
+            </a>
+
+            <p>© 2026 Todos los derechos reservados.</p>
+
+            <div class="footer-socials" aria-label="Redes sociales">
+                <a class="social-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                        <path
+                            d="M6.94 8.96H3.75V20h3.19V8.96ZM5.35 4a1.85 1.85 0 1 0 0 3.7 1.85 1.85 0 0 0 0-3.7Zm14.9 9.68c0-3.05-1.63-5.02-4.28-5.02-1.97 0-2.85 1.08-3.34 1.84V8.96H9.58V20h3.18v-5.46c0-1.44.27-2.84 2.06-2.84 1.76 0 1.79 1.65 1.79 2.93V20h3.18v-6.32h.46Z" />
+                    </svg>
+                </a>
+                <a class="social-link" href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                        <path
+                            d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.08 1.83 2.83 1.3 3.52.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
