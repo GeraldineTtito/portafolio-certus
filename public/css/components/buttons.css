@@ -1,0 +1,71 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    min-height: 30px;
+    padding: 6px 12px;
+    color: var(--color-lavender-strong);
+    background: linear-gradient(180deg, rgba(241, 233, 255, 0.82), rgba(255, 255, 255, 0.74));
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .pill {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.icon-button,
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.button {
+    min-height: 50px;
+    padding: 0 22px;
+}
+
+.button--primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    box-shadow: 0 16px 30px rgba(236, 111, 163, 0.28);
+}
+
+.button--secondary {
+    color: var(--color-text);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+
+.button:hover,
+.icon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.icon-button {
+    width: 44px;
+    height: 44px;
+    color: var(--color-primary-dark);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+    .button {
+        width: 100%;
+    }
+}

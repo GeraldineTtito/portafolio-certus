@@ -1,0 +1,66 @@
+/* ==========================================================================
+   SETTINGS / TOKENS
+   ========================================================================== */
+:root {
+    /* Colors - Light */
+    --color-bg: #fffafb;
+    --color-bg-soft: #fff3f7;
+    --color-card: rgba(255, 255, 255, 0.84);
+    --color-card-solid: #ffffff;
+    --color-primary: #ec6fa3;
+    --color-primary-dark: #d9538d;
+    --color-primary-soft: #ffe1ed;
+    --color-primary-alpha: rgba(236, 111, 163, 0.45);
+    --color-primary-alpha-light: rgba(236, 111, 163, 0.11);
+    --color-lavender: #f1e9ff;
+    --color-lavender-strong: #a98ad8;
+    --color-text: #29272d;
+    --color-muted: #746f7b;
+    --color-border: #efd9e5;
+    --color-border-alpha: rgba(239, 217, 229, 0.62);
+    --color-success: #42c58a;
+    --color-success-alpha: rgba(66, 197, 138, 0.14);
+    --color-shadow: rgba(216, 83, 141, 0.12);
+
+    /* Typography */
+    --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+
+    /* Sizes & Spacing */
+    --container: 1180px;
+
+    /* Radii */
+    --radius-sm: 14px;
+    --radius-md: 20px;
+    --radius-lg: 28px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-soft: 0 22px 60px rgba(216, 83, 141, 0.10);
+    --shadow-card: 0 16px 36px rgba(41, 39, 45, 0.07);
+
+    /* Transitions */
+    --transition: 180ms ease;
+}
+
+[data-theme="dark"] {
+    --color-bg: #17131a;
+    --color-bg-soft: #211824;
+    --color-card: rgba(34, 25, 38, 0.82);
+    --color-card-solid: #221926;
+    --color-primary: #ff8abc;
+    --color-primary-dark: #ff6aa9;
+    --color-primary-soft: rgba(255, 138, 188, 0.16);
+    --color-primary-alpha: rgba(236, 111, 163, 0.45);
+    --color-primary-alpha-light: rgba(236, 111, 163, 0.11);
+    --color-lavender: rgba(169, 138, 216, 0.18);
+    --color-lavender-strong: #c8a8ff;
+    --color-text: #fbf5f8;
+    --color-muted: #d6cbd4;
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-border-alpha: rgba(255, 255, 255, 0.09);
+    --color-success-alpha: rgba(66, 197, 138, 0.14);
+    --color-shadow: rgba(255, 138, 188, 0.12);
+    --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.24);
+    --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.22);
+}

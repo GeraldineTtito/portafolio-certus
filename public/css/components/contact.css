@@ -1,0 +1,114 @@
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+.contact-card {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: 50px;
+    padding: clamp(24px, 4vw, 42px);
+    border-radius: var(--radius-lg);
+}
+
+.contact-card__description {
+    margin: 10px 0 26px;
+    color: var(--color-muted);
+    font-weight: 650;
+}
+
+.contact-list {
+    display: grid;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contact-list a,
+.contact-list span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-muted);
+    font-weight: 800;
+}
+
+.contact-list svg {
+    color: var(--color-primary);
+    flex: 0 0 auto;
+}
+
+.contact-form {
+    display: grid;
+    gap: 14px;
+    padding-left: 44px;
+    border-left: 1px solid var(--color-border);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.form-field {
+    display: grid;
+    gap: 8px;
+}
+
+.form-field--full {
+    grid-column: 1 / -1;
+}
+
+.form-input {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 18px;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+[data-theme="dark"] .form-input {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+textarea.form-input {
+    min-height: 120px;
+    resize: vertical;
+    padding-block: 16px;
+}
+
+.form-input:focus {
+    border-color: rgba(236, 111, 163, 0.72);
+    box-shadow: 0 0 0 4px var(--color-primary-alpha-light);
+}
+
+.form-status {
+    min-height: 22px;
+    margin: 0;
+    color: var(--color-success);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 860px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--color-border);
+        padding-top: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
